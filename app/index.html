@@ -12,14 +12,28 @@
         <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-      <div ng-view></div>
-
-
-      <!-- In production use:
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-      -->
+        <header>
+            <img src="https://firebasestorage.googleapis.com/v0/b/codespark-acaad.appspot.com/o/codeSpark%2FcodeSpark_logo.png?alt=media&token=bb779640-55b8-44cc-8cc3-6b86d7048a2c" alt="codeSpark"/>
+        </header>
+        <div ng-view></div>
+      
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyA2VaJ1rUwgJrE6ATxYWwbgbev-bJ5yVX8",
+                authDomain: "codespark-acaad.firebaseapp.com",
+                databaseURL: "https://codespark-acaad.firebaseio.com",
+                storageBucket: "codespark-acaad.appspot.com",
+                messagingSenderId: "754744139887"
+            };
+            firebase.initializeApp(config);
+        </script>
+        
         <script src="app.js"></script>
         <script src="home/home.js"></script>
     </body>

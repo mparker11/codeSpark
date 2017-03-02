@@ -1,1 +1,30 @@
-<p>This is the partial for home</p>
+<div id="data-container">
+	<table>
+		<thead>
+			<tr>
+				<th class="empty-header"></th>
+				<th class="empty-header"></th>
+				<th ng-repeat="test in allTests" class="test-header">
+					<p class="test-name blue-text">{{ test.name }}</p>
+					<p class="test-date">{{ test.date }}</p>
+					<div class="test-avg big-score">{{ test.test_avg }}%</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="student in students">
+				<td class="student-name">
+					<span class="blue-text">{{ student.first_name }}</span>
+					<br />
+					<span>{{ student.last_name }}</span>
+				</td>
+				<td class="student-avg">
+					<span class="big-score">{{ student.test_avg }}%</span>
+				</td>
+				<td ng-repeat="test in allTests" class="test-scores">
+					<div class="score">{{ test.grades[student.student_id] }}{{ test.grades[student.student_id] === undefined ? '' : '%' }}</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

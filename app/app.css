@@ -1,25 +1,86 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+    width: 100%;
+    height: 100%;
 }
-
-.menu:before {
-  content: "[";
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f6f5f2;
+    border-bottom: 10px solid #244efe;
 }
-
-.menu:after {
-  content: "]";
+header img {
+    margin-left: 20px;
 }
-
-.menu > li {
-  display: inline;
+div[ng-view] {
+    width: 100%;
+    height: calc(100vh - 72px);
+    padding: 11px 0;
+    background: rgba(57,183,255,1);
+    background: -moz-linear-gradient(top, rgba(57,183,255,1) 0%, rgba(41,103,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(57,183,255,1)), color-stop(100%, rgba(41,103,254,1)));
+    background: -webkit-linear-gradient(top, rgba(57,183,255,1) 0%, rgba(41,103,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(57,183,255,1) 0%, rgba(41,103,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(57,183,255,1) 0%, rgba(41,103,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(57,183,255,1) 0%, rgba(41,103,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39b7ff', endColorstr='#2967fe', GradientType=0 );
 }
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+#data-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f6f5f2;
+    width: 100%;
+}
+.blue-text {
+    color: #3086fe;
+    font-weight: 700;
+}
+table {
+    margin-left: 50px;
+}
+table tr {
+    border-top: 2px solid #e6e1de;
+}
+table td {
+    border-right: 2px solid #e6e1de;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+table td:first-child, table td:last-child {
+    border-right: none;
+}
+thead th {
+    padding: 70px 8px 10px;
+}
+thead th:nth-child(2) {
+    border-right: 2px solid #e6e1de;
+}
+.test-header p {
+    -ms-transform: rotate(-45deg); 
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.test-name {
+    margin: 0;
+}
+.test-date {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.student-name, .student-avg {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.test-scores {
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.score {
+    color: #26c132; 
+    font-size: 1.5rem;
+}
+.big-score {
+    color: #26c132; 
+    font-size: 2rem;
+    font-weight: 700;
 }
